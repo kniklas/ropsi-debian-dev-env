@@ -25,6 +25,10 @@ git config --global alias.ci commit
 # To show current config
 git config --list
 
+# Install git completion
+sudo cp contrib/completion/git-completion.bash /etc/bash_completion.d/
+
+# Check version
 git --version
 
 # In order to clone use:
