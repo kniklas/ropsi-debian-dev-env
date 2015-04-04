@@ -4,4 +4,3 @@ syntax on
 
 set autoindent
 set ruler
-set number
