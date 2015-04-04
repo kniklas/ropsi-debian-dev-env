@@ -1,0 +1,5 @@
+escape C-z
+
+# e - restart; E - exit
+bind e exec ratpoison -c restart
+bind E exec ratpoison -c quit
