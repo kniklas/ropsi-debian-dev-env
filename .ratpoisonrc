@@ -5,3 +5,6 @@ bind e exec ratpoison -c restart
 bind E exec ratpoison -c quit
 
 bind c exec xterm -fa mono -fs 9 -bg black -fg green
+
+# Commented aterm as problem in display of mc and polish fonts
+# bind C exec aterm -fg green -fn 7x14
