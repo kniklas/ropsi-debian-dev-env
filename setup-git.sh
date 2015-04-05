@@ -1,3 +1,4 @@
+#!/bin/bash
 # Install dependencies
 sudo apt-get install asciidoc autoconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 

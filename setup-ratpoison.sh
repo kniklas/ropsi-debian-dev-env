@@ -1,3 +1,4 @@
+#!/bin/bash
 # Ratpoison setup
 
 # Install dependencies
