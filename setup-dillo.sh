@@ -6,7 +6,7 @@ cd ~/src
 # Install FLTK
 wget http://fltk.org/pub/fltk/1.3.3/fltk-1.3.3-source.tar.gz
 tar -xvf fltk-1.3.3-source.tar.gz
-cd fltk-1.3.3-source.tar.gz
+cd fltk-1.3.3
 make
 sudo make install
 
