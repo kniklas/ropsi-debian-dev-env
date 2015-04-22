@@ -29,5 +29,5 @@ make
 sudo make install
 
 # update alternatives (e.g. vi as vim)
-udo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
 sudo update-alternatives --set vi /usr/bin/vim
