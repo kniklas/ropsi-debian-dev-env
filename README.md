@@ -31,3 +31,4 @@ on need.
 * `setup-git.sh` - Git (version included in `~/src/git`
 * `setup-cantera.sh` - Cantera v2.0.2 including Sphinx html documentation
 * `setup-dillo.sh` - Dillo internet browser v3.0.4.1
+* `setup-midori.sh` - Midori internet browser v0.5.9-1
