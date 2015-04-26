@@ -1,6 +1,3 @@
-# TODO:
-# - key binding for dillo and midori
-
 # Replace default escape key binding
 escape C-z
 
@@ -8,7 +5,14 @@ escape C-z
 bind e exec ratpoison -c restart
 bind E exec ratpoison -c quit
 
+# execute xterm
+unbind c
 bind c exec xterm -fa mono -fs 9 -bg black -fg green
+
+# bind browsers
+unbind b
+bind b exec midori
+bind B exec dillo
 
 # Add workspaces (use ALT-F1 - ALT-FX) to switch
 exec rpws init 6 -k
