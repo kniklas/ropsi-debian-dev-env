@@ -1,3 +1,7 @@
+# TODO:
+# - key binding for dillo and midori
+
+# Replace default escape key binding
 escape C-z
 
 # e - restart; E - exit
@@ -5,6 +9,13 @@ bind e exec ratpoison -c restart
 bind E exec ratpoison -c quit
 
 bind c exec xterm -fa mono -fs 9 -bg black -fg green
+
+# Add workspaces (use ALT-F1 - ALT-FX) to switch
+exec rpws init 6 -k
+
+# Other keyboard shortcuts can be bind with workspaces if required
+# bind C-1 exec rpws 1
+# bind C-2 exec rpws 2
 
 # Commented aterm as problem in display of mc and polish fonts
 # bind C exec aterm -fg green -fn 7x14
