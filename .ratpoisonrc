@@ -13,6 +13,7 @@ bind c exec xterm -fa mono -fs 9 -bg black -fg green
 unbind b
 bind b exec midori
 bind B exec dillo
+bind g exec google-chrome
 
 # Add workspaces (use ALT-F1 - ALT-FX) to switch
 exec rpws init 6 -k
