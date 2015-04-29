@@ -15,6 +15,14 @@ bind b exec midori
 bind B exec dillo
 bind g exec google-chrome
 
+# Define keys
+unbind k
+unbind l
+bind k focusup
+bind j focusdown
+bind h focusleft
+bind l focusright
+
 # Add workspaces (use ALT-F1 - ALT-FX) to switch
 exec rpws init 6 -k
 
