@@ -41,13 +41,3 @@ autocmd BufReadPost *.py set textwidth=79
     	\ hlsearch
   	\ number
     	\ ruler
-
-" TO DO:
-" * map to key reload of .vimrc
-" * dormat doc strings: https://stackoverflow.com/questions/4027222/vim-use-shorter-textwidth-in-comments-and-docstrings
-" autocmd! bufwritepost .vimrc source %
-
-" REMOVED autocmd from python
-	"\ fo-=t " ???
-	"\ nowrap
-	"\ cc=-7 " show column limit for comments (72 column)
