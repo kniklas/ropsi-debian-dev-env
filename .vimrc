@@ -5,13 +5,15 @@ set nocp
 set background=dark
 
 " Use color scheme
-colorscheme murphy
+colorscheme desert
 
 " Alternate colorschemes
 " colorscheme delek
 " colorscheme elflord
 " colorscheme darkblue
 " colorscheme slate
+" colorscheme murphy
+
 syntax on
 
 filetype on
@@ -24,11 +26,18 @@ highlight ColorColumn ctermbg=7
 set bs=2
 set mouse=a
 
+" Write and then execute current open file
+nmap <F3> :w<CR> :pyfile %<CR>
+
+" Reload .vimrc file
+nmap <C-F5> :source ~/.vimrc<CR>
+
 " Format comments using 72 characters
 nmap <F6> :set textwidth=72<CR>gqj:set textwidth=79<CR>
 
-" Execute current open file
-nmap <F3> :pyfile %<CR>
+" Save file, update tags silently and refresh the screen
+" nmap <M-s> :w<CR> :silent !ctags *.py<CR><C-l>
+nmap <M-s> :w<CR> !ctags *.py<CR><CR>
 
 " Configuration for Plython (.py) files
 autocmd BufReadPost *.py set textwidth=79
