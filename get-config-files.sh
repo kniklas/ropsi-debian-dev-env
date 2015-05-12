@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TODO add -f parameter to this script to ignore cp -u flag
+# TODO add -f parameter to this script to ignore cp -u flag. This flag is required to force update newer file by older file.
 
 echo "     *** ATTENTION ***"
 echo "This script puts config files from home to repository folder."
