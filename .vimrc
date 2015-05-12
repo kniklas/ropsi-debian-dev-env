@@ -29,6 +29,10 @@ highlight ColorColumn ctermbg=7
 set bs=2
 set mouse=a
 
+" Highlight white spaces
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
 " Write and then execute current open file
 nmap <F3> :w<CR> :pyfile %<CR>
 
