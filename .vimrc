@@ -14,6 +14,9 @@ colorscheme desert
 " colorscheme slate
 " colorscheme murphy
 
+" Start pathogen to manage plugins and VIM runtime files
+execute pathogen#infect()
+
 syntax on
 
 filetype on
