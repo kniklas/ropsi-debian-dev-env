@@ -13,4 +13,5 @@ cp -v -i -u \
 	.ratpoisonrc \
 	.vimrc \
 	.xinitrc \
+	.bashrc \
 	~

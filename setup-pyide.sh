@@ -23,3 +23,10 @@ cd ~/git
 git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
+
+# Install Power-shell tool
+cd ~/git/
+git clone https://github.com/milkbikis/powerline-shell.git
+cd powerline-shell/
+./install.py 
+ln -s ~/git/powerline-shell/powerline-shell.py ~/powerline-shell.py
