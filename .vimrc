@@ -29,6 +29,12 @@ highlight ColorColumn ctermbg=7
 set bs=2
 set mouse=a
 
+" Load Powerline plugin
+set laststatus=2
+set showtabline=2
+set noshowmode
+source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
+
 " Highlight white spaces
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
@@ -42,7 +48,7 @@ nmap <C-F5> :source ~/.vimrc<CR>
 " Format comments using 72 characters
 nmap <F6> :set textwidth=72<CR>gqj:set textwidth=79<CR>
 
-" Save file, update tags silently and refresh the screen
+" Save file, update tags silently an refresh the screen
 " nmap <M-s> :w<CR> :silent !ctags *.py<CR><C-l>
 nmap <M-s> :w<CR> !ctags *.py<CR><CR>
 

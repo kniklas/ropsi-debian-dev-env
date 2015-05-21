@@ -7,7 +7,8 @@ bind E exec ratpoison -c quit
 
 # execute xterm
 unbind c
-bind c exec xterm -fa mono -fs 9 -bg black -fg green
+#bind c exec xterm -fa mono -fs 9 -bg black -fg green
+bind c exec xterm -fa 'Source Code Pro Medium' -fs 10 -bg black -fg green
 
 # bind browsers
 unbind b

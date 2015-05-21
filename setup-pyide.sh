@@ -13,3 +13,13 @@ sudo apt-get install \
 # Make sure there is `execute pathogen#infect()` in .vimrc
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Install Powerline for VIM
+cd ~/.vim/bundle
+git clone https://github.com/powerline/powerline.git
+
+# Install Powerline fonts
+cd ~/git
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
