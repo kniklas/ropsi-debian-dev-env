@@ -2,13 +2,18 @@
 set nocp
 
 " Use dark background
-set background=dark
+" set background=dark
+
+" Ensure to use 256 colors in xterm
+set t_Co=256
 
 " Use color scheme
-colorscheme desert
+" colorscheme wombat256mod
+colorscheme desert256
 
 " Alternate colorschemes
 " colorscheme delek
+" colorscheme desert
 " colorscheme elflord
 " colorscheme darkblue
 " colorscheme slate
@@ -36,8 +41,8 @@ set noshowmode
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 
 " Highlight white spaces
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
+" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Write and then execute current open file
 nmap <F3> :w<CR> :pyfile %<CR>
