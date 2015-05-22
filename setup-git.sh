@@ -22,12 +22,17 @@ git config --global push.default simple
 git config --global alias.st status
 git config --global alias.co checkout
 git config --global alias.ci commit
+git config --global alias.d difftool
 
 # To show current config
 git config --list
 
 # Install git completion
 sudo cp contrib/completion/git-completion.bash /etc/bash_completion.d/
+
+# Enable vimdiff as difftool
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
 
 # Check version
 git --version
