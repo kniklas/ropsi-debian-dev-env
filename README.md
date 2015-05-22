@@ -33,3 +33,4 @@ on need.
 * `setup-dillo.sh` - Dillo internet browser v3.0.4.1
 * `setup-midori.sh` - Midori internet browser v0.5.9-1
 * `setup-chrome.sh` - Google Chrome internet browser
+* `setup-pyide.sh` - Programming and Python specific plugins
