@@ -24,6 +24,9 @@ execute pathogen#infect()
 
 " Configure ctrlp.vim
 let g:ctrlp_max_height = 30
+
+" Use c-Z key mapping to avoid conflict with Ratpoison mapping
+let g:ctrlp_prompt_mappings = {'MarkToOpen()': ['<c-Z>']}
 set wildignore+=*.pyc
 set wildignore+=*build/*
 set wildignore+=*dist/*
