@@ -11,6 +11,12 @@ set t_Co=256
 " colorscheme wombat256mod
 colorscheme desert256
 
+" Use <Leader> to '<space>' key
+let mapleader = "\<space>"
+
+noremap <Leader>e :quit<CR>
+noremap <Leader>E :qa<CR>
+
 " Alternate colorschemes
 " colorscheme delek
 " colorscheme desert
