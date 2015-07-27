@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Install dependencies
-sudo apt-get install \
-	gcc make \ # compilation dependencies
-	linux-headers-$(uname -r) # required for cocnfugration
+sudo apt-get install gcc make linux-headers-$(uname -r) 
 
 # mount cd drive
 # ...
