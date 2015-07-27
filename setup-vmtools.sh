@@ -1,15 +1,18 @@
 #!/bin/bash
 
+# Good if X is installed earlier
+
 # Install dependencies
 sudo apt-get install \
 	gcc make \ # compilation dependencies
 	linux-headers-$(uname -r) # required for cocnfugration
 
-# mount cd drive
-# ...
-
-# call install on mounted drive
-# ...
+# sudo mkdir /mnt/cdrom
+# sudo mount /dev/cdrom /mnt/cdrom
+# cp VMwareTools-9.9.3-2759765.tar.gz ~
+# tar xf VMwareTools-9.9.3-2759765.tar.gz
+# cd vmware-tools-distrib
+# sudo ./vmware-install.pl
 
 # To reconfigure VMWare Tools
 # sudo /usr/bin/vmware-config-tools.pl
