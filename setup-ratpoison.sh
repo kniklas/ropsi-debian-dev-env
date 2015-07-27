@@ -19,5 +19,5 @@ make
 sudo make install
 
 # Perform additional configuration if required
-* .xinitrc
-* .ratpoisonrc
+# .xinitrc
+# .ratpoisonrc
