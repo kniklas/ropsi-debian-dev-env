@@ -25,8 +25,8 @@ is important!). The scripts are executed as whole or their fragments depending
 on need.
 
 * `setup-sudoers.sh` - Sudoers
-* `setup-vmtools.sh` - Linux VMTools (**yet incomplete!!!**)
 * `setup-ratpoison.sh` - Ratpoison v1.4.8
+* `setup-vmtools.sh` - Linux VMTools
 * `setup-vim.sh` - VIM 7.4.x with updated alternatives (like vi)
 * `setup-git.sh` - Git (version included in `~/src/git`
 * `setup-cantera.sh` - Cantera v2.0.2 including Sphinx html documentation
