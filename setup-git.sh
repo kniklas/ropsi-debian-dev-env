@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# In order to get git source use:
+# git clone https://github.com/git/git.git
+
 # Install dependencies
 sudo apt-get install asciidoc autoconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 
@@ -31,6 +35,3 @@ sudo cp contrib/completion/git-completion.bash /etc/bash_completion.d/
 
 # Check version
 git --version
-
-# In order to clone use:
-# git clone https://github.com/git/git.git
