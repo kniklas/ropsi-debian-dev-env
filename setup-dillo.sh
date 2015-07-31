@@ -3,6 +3,7 @@
 # Install DILLO
 
 # Get dependencies
+mkdir -p ~/src
 cd ~/src
 
 # Install FLTK

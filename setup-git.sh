@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # In order to get git source use:
+# mkdir -p ~/src
 # git clone https://github.com/git/git.git
 
 # Install dependencies

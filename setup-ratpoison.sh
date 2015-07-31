@@ -2,12 +2,13 @@
 # Ratpoison setup
 
 # Install dependencies
-sudo apt-get install \ 
-	xcompmgr \ # required for transparency config
-	gcc make \ # required for compilation
-	xorg xorg-dev # required for X dependencies
+sudo apt-get install xcompmgr gcc make xorg xorg
+# xcompmgr - required for transparency config
+# gcc make -  required for compilation
+# xorg xorg-dev - required for X dependencies
 
-# Donlowad source
+# Download source
+mkdir -p ~/src
 cd ~/src
 wget http://download.savannah.nongnu.org/releases/ratpoison/ratpoison-1.4.8.tar.xz
 tar -xf ratpoison-1.4.8.tar.xz

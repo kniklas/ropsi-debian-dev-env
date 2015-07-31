@@ -11,7 +11,8 @@
 sudo apt-get install ncurses-dev build-essential mercurial python-dev
 
 # Put source into home directory
-cd ~
+mkdir -p ~/src
+cd ~/src
 hg clone https://vim.googlecode.com/hg/ vim
 
 # Remove earlier installed VIMs
@@ -29,6 +30,14 @@ make distclean
 make
 sudo make install
 
-# update alternatives (e.g. vi as vim)
-sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
-sudo update-alternatives --set vi /usr/bin/vim
+# Update alternatives (e.g. vi as vim)
+# Read 'man update-alternatives'
+#sudo update-alternatives --install /usr/bin/vim editor /usr/local/bin/vim 100
+#sudo update-alternatives --install /usr/bin/vi editor /usr/local/bin/vim 200 
+#
+#Run: (after update-alternatives)
+#     select-editor (interactively select vim)
+
+# OLD version:
+#sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
+#sudo update-alternatives --set vi /usr/bin/vim

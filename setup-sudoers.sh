@@ -10,5 +10,3 @@ echo "add new line: 'kamil ALL=(ALL) ALL'"
 echo "press CTRL-X and Y."
 
 visudo
-
-

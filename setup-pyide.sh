@@ -5,9 +5,7 @@
 # Install dependencies
 # 	ctags - required for tags management in VIM
 #	curl - required to download files via https (e.g. pathogen.vim)
-sudo apt-get install \
-	curl \
-	ctags
+sudo apt-get install curl ctags
 
 # Install pathogen.vim
 # Make sure there is `execute pathogen#infect()` in .vimrc
