@@ -3,7 +3,8 @@
 # Good if X is installed earlier!!
 
 # Install dependencies
-sudo apt-get install gcc make linux-headers-$(uname -r) 
+sudo apt-get install gcc make linux-headers-$(uname -r) zx-utils
+# zx-utils - required by tar gz
 
 # sudo mkdir /mnt/cdrom
 # sudo mount /dev/cdrom /mnt/cdrom

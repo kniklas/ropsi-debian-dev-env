@@ -3,6 +3,7 @@
 # Install DILLO
 
 # Get dependencies
+sudo apt-get install zx-utils
 mkdir -p ~/src
 cd ~/src
 
