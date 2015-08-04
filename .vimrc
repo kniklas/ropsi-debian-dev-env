@@ -31,6 +31,9 @@ execute pathogen#infect()
 " Configure ctrlp.vim
 let g:ctrlp_max_height = 30
 
+" If the CTRL-P help does not work execute this command:
+" helptags ~/.vim/bundle/ctrlp.vim/doc
+
 " Use c-Z key mapping to avoid conflict with Ratpoison mapping
 let g:ctrlp_prompt_mappings = {'MarkToOpen()': ['<c-Z>']}
 set wildignore+=*.pyc
