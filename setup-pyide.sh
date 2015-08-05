@@ -41,3 +41,8 @@ wget http://www.vim.org/scripts/download_script.php?src_id=13397 -O wombat256.vi
 # Make sure to configure this in .vimrc
 cd ~/.vim/bundle/
 git clone https://github.com/kien/ctrlp.vim.git
+
+# Install NERDTree
+# Make sure to configure this plugin in .vimrc
+cd ~/.vim/bundle/
+git clone https://github.com/scrooloose/nerdtree.git
