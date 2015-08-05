@@ -39,6 +39,12 @@ map <Leader>n <esc>:tabnext<CR>
 " Start pathogen to manage plugins and VIM runtime files
 execute pathogen#infect()
 
+" Configure NERDTree
+" " Run with <leader>t and close the window is last empty window has NERD tree
+nmap <leader>t :NERDTree<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")) &&
+(b:NERDTreeType == "primary") | q | endif
+
 " Configure ctrlp.vim
 let g:ctrlp_max_height = 30
 
