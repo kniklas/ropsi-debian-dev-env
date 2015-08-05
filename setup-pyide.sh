@@ -39,10 +39,15 @@ wget http://www.vim.org/scripts/download_script.php?src_id=13397 -O wombat256.vi
 
 # Instal CtrlP search in VIM
 # Make sure to configure this in .vimrc
+# Make sure to run once `:helptags ~/.vim/bundle/ctrlp.vim/doc`
 cd ~/.vim/bundle/
 git clone https://github.com/kien/ctrlp.vim.git
 
 # Install NERDTree
 # Make sure to configure this plugin in .vimrc
-cd ~/.vim/bundle/
+# Make sure to run once `:helptags ~/.vim/bundle/nerdtree/doc`
 git clone https://github.com/scrooloose/nerdtree.git
+
+# Install NERDCommenter
+# Make sure to run once `:helptags ~/.vim/bundle/nerdcommenter/doc`
+git clone https://github.com/scrooloose/nerdcommenter.git
