@@ -12,10 +12,6 @@ sudo apt-get install curl ctags
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-# Install Powerline for VIM
-cd ~/.vim/bundle
-git clone https://github.com/powerline/powerline.git
-
 # Install Powerline fonts
 cd ~/git
 git clone https://github.com/powerline/fonts.git
@@ -37,10 +33,13 @@ wget http://www.vim.org/scripts/download_script.php?src_id=13400 -O wombat256mod
 wget http://www.vim.org/scripts/download_script.php?src_id=4055 -O desert256.vim
 wget http://www.vim.org/scripts/download_script.php?src_id=13397 -O wombat256.vim
 
+# Install Powerline for VIM
+cd ~/.vim/bundle
+git clone https://github.com/powerline/powerline.git
+
 # Instal CtrlP search in VIM
 # Make sure to configure this in .vimrc
 # Make sure to run once `:helptags ~/.vim/bundle/ctrlp.vim/doc`
-cd ~/.vim/bundle/
 git clone https://github.com/kien/ctrlp.vim.git
 
 # Install NERDTree
@@ -51,3 +50,15 @@ git clone https://github.com/scrooloose/nerdtree.git
 # Install NERDCommenter
 # Make sure to run once `:helptags ~/.vim/bundle/nerdcommenter/doc`
 git clone https://github.com/scrooloose/nerdcommenter.git
+
+# Install ACK.VIM
+# Make sure to run once `:helptags ~/.vim/bundle/ack.vim/doc`
+# Make sure add `nmap <leader>a <ESC>:Ack!`> in .vimrc Note that for Debian 7
+# below installation must take place. For Debian 8 (Jessie) ack-grep has verion
+# 2.14 that is sufficient and next three lines can be replaced by simple:
+# `sudo apt-get install ack-grep`
+curl http://beyondgrep.com/ack-2.14-single-file > ack-grep
+chmod u+x ack-grep
+sudo mv -v ack-grep /usr/bin/ack-grep
+
+git clone https://github.com/mileszs/ack.vim.git

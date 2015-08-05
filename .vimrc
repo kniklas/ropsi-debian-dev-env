@@ -59,6 +59,9 @@ set wildignore+=*dist/*
 set wildignore+=*.egg-info/*
 set wildignore+=*/coverage/*
 
+" Use ACK.VIM
+nmap <leader>a <Esc>:Ack!
+
 syntax on
 
 filetype on
