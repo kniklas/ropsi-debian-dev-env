@@ -8,12 +8,12 @@ It is assumed the environment is as *lightweight* as possible.
 
 # Pre-conditions
 
-This development environment is tested under Debian 7 Linux 64 bit (via
+This development environment is tested under *Debian 7 Linux 64 bit* (via
 VMware). It is assumed the linux is installed with minimum set of features
 via network installer.
 
-Compatibility of this deployment tool is not verified against other linux
-distributions.
+Compatibility of this deployment tool is not verified against other operating
+systems and linux distributions.
 
 # Deployment of packages
 
@@ -34,3 +34,19 @@ on need.
 * `setup-midori.sh` - Midori internet browser v0.5.9-1
 * `setup-chrome.sh` - Google Chrome internet browser
 * `setup-pyide.sh` - Programming and Python specific plugins
+
+# VIM plugins
+
+* Pathogen.vim
+* Powerline for VIM
+* 256 colour syntax highlight
+* CtrlP.vim
+* NERDTree.vim
+* NERDComment.vim
+* ACK.vim
+* Python-mode
+
+# Shell extentions
+
+* 256 colors in xterm
+* Powerline shell and fonts
