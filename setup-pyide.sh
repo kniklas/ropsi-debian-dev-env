@@ -51,6 +51,9 @@ git clone https://github.com/scrooloose/nerdtree.git
 # Make sure to run once `:helptags ~/.vim/bundle/nerdcommenter/doc`
 git clone https://github.com/scrooloose/nerdcommenter.git
 
+# Install Python-mode
+git clone git://github.com/klen/python-mode.git
+
 # Install ACK.VIM
 # Make sure to run once `:helptags ~/.vim/bundle/ack.vim/doc`
 # Make sure add `nmap <leader>a <ESC>:Ack!`> in .vimrc Note that for Debian 7
