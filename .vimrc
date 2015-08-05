@@ -25,6 +25,17 @@ noremap <Leader>E :qa<CR>
 " colorscheme slate
 " colorscheme murphy
 
+" Easier movement through the windows
+" Use <c-j> instead of <c-w>j, etc.
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Navigate through the tabs
+map <Leader>N <esc>:tabprevious<CR>
+map <Leader>n <esc>:tabnext<CR>
+
 " Start pathogen to manage plugins and VIM runtime files
 execute pathogen#infect()
 
