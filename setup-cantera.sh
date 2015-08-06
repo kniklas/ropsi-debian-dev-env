@@ -1,21 +1,17 @@
 #!/bin/bash
 
 # Get dependencies
-sudo apt-get install \
-	g++ \
-	python \
-	scons \
-	libboost-all-dev \
-	libsundials-serial-dev \
-	subversion \
-	sphinx-common \
-	# Required for building Python modules
-	cython \ # !!! NOTE debian package is outdated and not compatible!
-	python-dev \
-	python-numpy \
-	python-numpy-dev
+sudo apt-get install g++ python scons libboost-all-dev libsundials-serial-dev \
+	subversion sphinx-common cython python-dev python-numpy python-numpy-dev
 
+# Required for building Python modules
+# cython  !!! NOTE debian package is outdated and not compatible!
+# python-dev 
+# python-numpy 
+# python-numpy-dev
+	
 # Installation
+mkdir -p ~/src
 cd ~/src
 
 # Install PIP

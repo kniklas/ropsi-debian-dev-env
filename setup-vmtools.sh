@@ -1,13 +1,14 @@
 #!/bin/bash
 
-# Good if X is installed earlier
+# Good if X is installed earlier!!
 
 # Install dependencies
-sudo apt-get install gcc make linux-headers-$(uname -r) 
+sudo apt-get install gcc make linux-headers-$(uname -r) zx-utils
+# zx-utils - required by tar gz
 
 # sudo mkdir /mnt/cdrom
 # sudo mount /dev/cdrom /mnt/cdrom
-# cp VMwareTools-9.9.3-2759765.tar.gz ~
+# cp /mnt/cdrom/VMwareTools-9.9.3-2759765.tar.gz ~
 # tar xf VMwareTools-9.9.3-2759765.tar.gz
 # cd vmware-tools-distrib
 # sudo ./vmware-install.pl
