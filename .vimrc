@@ -4,6 +4,15 @@ set nocp
 " Use dark background
 " set background=dark
 
+" Start pathogen to manage plugins and VIM runtime files
+" Pathogen load
+"filetype off
+execute pathogen#infect()
+execute pathogen#helptags()
+
+syntax on
+filetype plugin indent on
+
 " Ensure to use 256 colors in xterm
 set t_Co=256
 
@@ -28,25 +37,38 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 " Navigate through the tabs
-map <Leader>N <esc>:tabprevious<CR>
-map <Leader>n <esc>:tabnext<CR>
+map <Leader>m <esc>:tabnext<CR>
+map <Leader>M <esc>:tabprevious<CR>
 
-" Start pathogen to manage plugins and VIM runtime files
-" Pathogen load
-filetype off
-execute pathogen#infect()
-execute pathogen#helptags()
-filetype plugin indent on
-syntax on
+" Navigate through the buffers
+map <Leader>n <esc>:bn<CR>
+map <Leader>N <esc>:bp<CR>
 
 " Configure Python-mode
-map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
+"map <Leader>g :call RopeGotoDefinition()<CR>
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+" Go to definition
+let g:pymode_rope_goto_definition_bind = '<leader>g'
+let g:pymode_rope_goto_definition_cmd = 'new'
+" Completion
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_completion_bind = '<C-Space>'
+let g:pymode_rope_autoimport = 1
+let g:pymode_indent = 1
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+let g:pymode_folding = 1
+let g:pymode_options_max_line_length = 79
+let g:pymode_options_colorcolumn = 1
+let g:pymode_trim_whitespaces = 1
 let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
 let g:pymode_virtualenv = 1
+" Disabled configuration - probably outdated
+"let ropevim_enable_shortcuts = 1
+"let g:pymode_rope_goto_def_newwin = "vnew"
 
 " Configure NERDTree
 " Run with <leader>t and close the window is last empty window has NERD tree
@@ -68,7 +90,7 @@ set wildignore+=*/coverage/*
 nmap <leader>a <Esc>:Ack!
 
 " Set color for column
-highlight ColorColumn ctermbg=7
+"highlight ColorColumn ctermbg=7
 
 " Normal backspace and mouse
 set bs=2
@@ -103,9 +125,9 @@ autocmd BufReadPost *.py set textwidth=79
     	\ tabstop=8
     	\ shiftwidth=4
     	\ softtabstop=4
-  	\ colorcolumn=80
     	\ expandtab
     	\ autoindent
     	\ hlsearch
   	\ number
     	\ ruler
+          "\ colorcolumn=80
