@@ -12,3 +12,7 @@ sudo cp -r $CPP $PP
 # Alternatively invoke in start.py file: 
 # import sys
 # sys.path.append('/home/kamil/cantera_2_0/lib/python2.7/site-packages')
+
+# Keep in mind to set path for .csv output files
+# file: Engine/Configuration/Defaults.py
+# fPath = 'path'
