@@ -25,7 +25,7 @@ filetype plugin indent on
 set t_Co=256
 
 " Use color scheme
-colorscheme wombat256mod
+colorscheme wombat256
 "colorscheme desert256
 
 " Alternate 16 color colorschemes

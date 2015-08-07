@@ -39,23 +39,19 @@ git clone https://github.com/powerline/powerline.git
 
 # Instal CtrlP search in VIM
 # Make sure to configure this in .vimrc
-# Make sure to run once `:helptags ~/.vim/bundle/ctrlp.vim/doc`
 git clone https://github.com/kien/ctrlp.vim.git
 
 # Install NERDTree
 # Make sure to configure this plugin in .vimrc
-# Make sure to run once `:helptags ~/.vim/bundle/nerdtree/doc`
 git clone https://github.com/scrooloose/nerdtree.git
 
 # Install NERDCommenter
-# Make sure to run once `:helptags ~/.vim/bundle/nerdcommenter/doc`
 git clone https://github.com/scrooloose/nerdcommenter.git
 
 # Install Python-mode
 git clone git://github.com/klen/python-mode.git
 
 # Install ACK.VIM
-# Make sure to run once `:helptags ~/.vim/bundle/ack.vim/doc`
 # Make sure add `nmap <leader>a <ESC>:Ack!`> in .vimrc Note that for Debian 7
 # below installation must take place. For Debian 8 (Jessie) ack-grep has verion
 # 2.14 that is sufficient and next three lines can be replaced by simple:
