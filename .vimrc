@@ -1,33 +1,48 @@
 " do not use compatible mode
 set nocp
 
+" Automatically release .vimrc file upon save
+autocmd! bufwritepost .vimrc source %
+
 " Use dark background
 " set background=dark
 
+" Highlight white spaces
+" NOTE: this must be run before syntax highlight command!
+"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+"au InsertLeave * match ExtraWhitespace /\s\+$/
+
 " Start pathogen to manage plugins and VIM runtime files
 " Pathogen load
-"filetype off
 execute pathogen#infect()
 execute pathogen#helptags()
 
 syntax on
+filetype off
 filetype plugin indent on
 
 " Ensure to use 256 colors in xterm
 set t_Co=256
 
 " Use color scheme
-" colorscheme wombat256mod
-colorscheme desert256
+colorscheme wombat256mod
+"colorscheme desert256
+
+" Alternate 16 color colorschemes
+" delek desert elflord darkblue slate murphy
 
 " Use <Leader> to '<space>' key
 let mapleader = "\<space>"
 
 noremap <Leader>e :quit<CR>
 noremap <Leader>E :qa<CR>
+noremap <Leader>Q :qa!<CR>
 
-" Alternate colorschemes
-" delek desert elflord darkblue slate murphy
+" Delete Buffer
+map <Leader>d <esc>:bd<CR>
+
+" Map sorting to s key
+vnoremap <Leader>s :sort<CR>
 
 " Easier movement through the windows
 " Use <c-j> instead of <c-w>j, etc.
@@ -35,6 +50,10 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" Easier indentation of code
+vnoremap < <gv
+vnoremap > >gv
 
 " Navigate through the tabs
 map <Leader>m <esc>:tabnext<CR>
@@ -56,10 +75,12 @@ let g:pymode_rope_completion = 1
 let g:pymode_rope_complete_on_dot = 1
 let g:pymode_rope_completion_bind = '<C-Space>'
 let g:pymode_rope_autoimport = 1
+"let g:pymode_lint_ignore = "W,E"
 let g:pymode_indent = 1
 let g:pymode_doc = 1
 let g:pymode_doc_bind = 'K'
 let g:pymode_folding = 1
+" NOTE: consult VIM manuals for folding commands! `:help fold-commands`
 let g:pymode_options_max_line_length = 79
 let g:pymode_options_colorcolumn = 1
 let g:pymode_trim_whitespaces = 1
@@ -102,13 +123,13 @@ set showtabline=2
 set noshowmode
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 
-" Highlight white spaces
-" Disabled as does not work very well
-"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-"au InsertLeave * match ExtraWhitespace /\s\+$/
+" Easier formatting of paragraphs
+" Note the `nmap Q` replace Ex mode entry from Normal mode
+vmap Q gq
+nmap Q gqap 
 
 " Write and then execute current open file
-nmap <F3> :w<CR> :pyfile %<CR>
+"nmap <F3> :w<CR> :pyfile %<CR>
 
 " Reload .vimrc file
 nmap <C-F5> :source ~/.vimrc<CR>
