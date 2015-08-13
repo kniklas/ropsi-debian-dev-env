@@ -25,7 +25,7 @@ cd powerline-shell/
 ./install.py 
 ln -s ~/git/powerline-shell/powerline-shell.py ~/powerline-shell.py
 
-# Install wombat 256 colors in xterm
+# Install 256 colors in xterm
 # Make sure to include in .vimrc correct colorscheme
 mkdir -p ~/.vim/colors
 cd ~/.vim/colors
@@ -33,8 +33,14 @@ wget http://www.vim.org/scripts/download_script.php?src_id=13400 -O wombat256mod
 wget http://www.vim.org/scripts/download_script.php?src_id=4055 -O desert256.vim
 wget http://www.vim.org/scripts/download_script.php?src_id=13397 -O wombat256.vim
 
-# Install Powerline for VIM
+# Install Solarized colorscheme
+# NOTE: keep in mind to modify .vimrc:
+#    let g:solarized_termcolors=256
+#    colorscheme solarized
 cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
+
+# Install Powerline for VIM
 git clone https://github.com/powerline/powerline.git
 
 # Instal CtrlP search in VIM

@@ -5,7 +5,7 @@ set nocp
 autocmd! bufwritepost .vimrc source %
 
 " Use dark background
-" set background=dark
+set background=dark
 
 " Highlight white spaces
 " NOTE: this must be run before syntax highlight command!
@@ -23,9 +23,11 @@ filetype plugin indent on
 
 " Ensure to use 256 colors in xterm
 set t_Co=256
+let g:solarized_termcolors=256
 
 " Use color scheme
-colorscheme wombat256
+colorscheme solarized
+"colorscheme wombat256
 "colorscheme desert256
 
 " Alternate 16 color colorschemes
