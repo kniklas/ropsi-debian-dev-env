@@ -18,14 +18,24 @@ hg clone https://vim.googlecode.com/hg/ vim
 # Remove earlier installed VIMs
 sudo apt-get remove vim-common vim-tiny
 
+# In order to remove previously compiled versions:
+# make clean # - remove binary files
+# make distclean # - remove configure files
+# sudo make uninstall_runtime # - remove runtime files (for details see vim/src/Makefile)
+
+
 # Perform installation from the source
 # In Debian 8 use python lib: /usr/lib/python2.7/config-x86_64-linux-gnu
 cd vim/src
+make clean
 make distclean
 ./configure \
 	--with-features=huge \
 	--enable-pythoninterp \
+	--enable-python3interp \
 	--with-python-config-dir=/usr/lib/python2.7/config \
+	--with-python3-config-dir=/usr/lib/python3.2/config \
+	--with-compiledby="Kamil Niklasiński" \
 	--enable-fail-if-missing
 make
 sudo make install
