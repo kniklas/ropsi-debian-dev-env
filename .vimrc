@@ -65,6 +65,7 @@ map <Leader>N <esc>:bp<CR>
 
 " Configure Python-mode
 "map <Leader>g :call RopeGotoDefinition()<CR>
+let g:pymode_python = 'python3'
 let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
 " Go to definition
