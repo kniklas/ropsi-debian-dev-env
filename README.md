@@ -27,7 +27,7 @@ on need.
 * `setup-sudoers.sh` - Sudoers
 * `setup-ratpoison.sh` - Ratpoison v1.4.8
 * `setup-vmtools.sh` - Linux VMTools
-* `setup-vim.sh` - VIM 7.4.x with updated alternatives (like vi)
+* `setup-vim.sh` - VIM 7.4.x with updated alternatives (like vi) and Python 3
 * `setup-git.sh` - Git (version included in `~/src/git`)
 * `setup-cantera.sh` - Cantera v2.0.2 including Sphinx html documentation
 * `setup-dillo.sh` - Dillo internet browser v3.0.4.1
@@ -45,7 +45,7 @@ on need.
 * NERDTree.vim
 * NERDComment.vim
 * ACK.vim
-* Python-mode
+* Python-mode - with enabled Python 3 support only
 
 # Shell extentions
 
