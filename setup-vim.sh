@@ -8,7 +8,7 @@
 # b) See if there is other way to use alternatives (i.e. use vi for vim)
 
 # Ensure there are met installation pre-conditions
-sudo apt-get install ncurses-dev build-essential mercurial python-dev
+sudo apt-get install ncurses-dev build-essential mercurial python-dev python3-dev
 
 # Put source into home directory
 mkdir -p ~/src
