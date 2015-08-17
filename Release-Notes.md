@@ -28,5 +28,5 @@ It is initial version of the development environment configuration files. Used o
 
 ### Known issues
 
-* Midori consumes 100% CPU and cannot paste between Midori and terminal
-* Blinking screen in VIM - each type keyboard stroke, the screen refreshes 
+* Midori consumes 100% CPU and cannot paste between Midori and terminal [#22]
+* Blinking screen in VIM - each type keyboard stroke, the screen refreshes [#27]
