@@ -3,7 +3,7 @@
 # Configure ROPSI development environment
 
 # Copy Cantera python package to default python packages folder
-CPP=~/cantera_2_0/lib/python2.7/site-packages/
+CPP=~/cantera_2_0/lib/python2.7/site-packages/*
 PP=/usr/lib/python2.7/dist-packages/
 
 echo "Copying package from:" $CPP "to: " $PP
