@@ -23,3 +23,8 @@ sudo make install
 # Perform additional configuration if required
 # .xinitrc
 # .ratpoisonrc
+
+# in order to browse help on rpws use:
+# perldoc /usr/local/bin/rpws
+# or
+# rpws help
