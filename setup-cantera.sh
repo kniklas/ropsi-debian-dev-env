@@ -2,16 +2,21 @@
 
 # Get dependencies
 sudo apt-get install g++ python scons libboost-all-dev libsundials-serial-dev \
-	subversion sphinx-common cython python-dev python-numpy python-numpy-dev
+	subversion sphinx-common cython python-dev python-numpy python-numpy-dev \
+	python3-numpy cython3 cython
 
 # Required for building Python modules
-# cython  !!! NOTE debian package is outdated and not compatible!
 # python-dev 
 # python-numpy 
 # python-numpy-dev
+
+CANTERA_VER=cantera_2_2
+CANTERA_VER_GIT=2.2
 	
 # Installation
 mkdir -p ~/src
+#mkdir -p /home/$USER/cantera_2_0
+mkdir -p /home/$USER/$CANTERA_VER
 cd ~/src
 
 # Install PIP
@@ -20,22 +25,28 @@ sudo python get-pip.py
 
 # Install Most recent sphinx and dependencies (required for documentation)
 sudo pip Sphinx
+sudo pip 3to2
 sudo easy_install -U pygments
 sudo easy_install -U pyparsing
 sudo easy_install sphinxcontrib-doxylink
-
-# Install Cython (in case newer version of cantera is required)
-sudo easy_install cython
+sudo easy_install sphinxcontrib-matlabdomain
 
 # Install Cantera
-# Download source code - uncomment specific line depending on required version
-svn checkout http://cantera.googlecode.com/svn/cantera/branches/2.0/ cantera_2_0
-# svn checkout http://cantera.googlecode.com/svn/cantera/branches/2.1/ cantera_2_1
+git clone https://github.com/Cantera/cantera.git
+cd cantera
+git checkout $CANTERA_VER_GIT
+
+# use below command to see available configuration options
+#scons help | less
 
 # Install - apply specifc path depending on version
-scons build prefix=/home/$USER/cantera_2_0 sphinx_docs=yes
+#scons build prefix=/home/$USER/cantera_2_0 sphinx_docs=yes
+scons build prefix=/home/$USER/$CANTERA_VER sphinx_docs=yes python_package=full python3_package=y
 scons test
-scons install
+sudo scons install
+
+# NOTE - PYTHON SAMPLES
+# ~/src/cantera/interfaces/cython/cantera/examples
 
 # *** AFTER THE INSTALLATION - EXAMPLE MESSAGE ***
 #
@@ -43,15 +54,16 @@ scons install
 # 
 # File locations:
 # 
-# applications      /home/kamil/cantera_2_0/bin
-# library files     /home/kamil/cantera_2_0/lib
-# C++ headers       /home/kamil/cantera_2_0/include/cantera
-# samples           /home/kamil/cantera_2_0/share/cantera/samples
-# data files        /home/kamil/cantera_2_0/share/cantera/data
-# 
-# Python package    /home/kamil/cantera_2_0/lib/python2.7/site-packages
-# 
-# setup script      /home/kamil/cantera_2_0/bin/setup_cantera
+# applications   		 /home/kamil/cantera_2_2/bin
+# library files  		 /home/kamil/cantera_2_2/lib
+# C++ headers    		 /home/kamil/cantera_2_2/include
+# samples        		 /home/kamil/cantera_2_2/share/cantera/samples
+# data files     		 /home/kamil/cantera_2_0/share/cantera/data
+# Python 2 package (cantera) 	 /home/kamil/cantera_2_2/lib/python2.7/site-packages
+# Python 2 samples           	 /home/kamil/cantera_2_2/lib/python2.7/site-packages/cantera/examples
+# Python 3 package (cantera) 	 /home/kamil/cantera_2_2/lib/python3.4/site-packages
+# Python 3 samples           	 /home/kamil/cantera_2_2/lib/python3.4/site-packages/cantera/examples
+# setup script     		 /home/kamil/cantera_2_2/bin/setup_cantera
 # 
 # The setup script configures the environment for Cantera. It is
 # recommended that you run this script by typing:
