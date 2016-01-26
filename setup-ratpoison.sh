@@ -2,11 +2,11 @@
 # Ratpoison setup
 
 # Install dependencies
-sudo apt-get install xcompmgr gcc make xorg xorg xz-utils
+sudo apt-get install xcompmgr gcc make xorg xorg-dev xz-utils
 # xcompmgr - required for transparency config
 # gcc make -  required for compilation
 # xorg xorg-dev - required for X dependencies
-# zx-utils - required by tar gz
+# xz-utils - required by tar gz
 
 # Download source
 mkdir -p ~/src
