@@ -45,7 +45,15 @@ scons build prefix=/home/$USER/$CANTERA_VER sphinx_docs=yes python_package=full 
 scons test
 sudo scons install
 
+# NOTE - MODULES
+# ==============
+# python3_package=y might cause problems - see issue: #36
+# In this case it is not required to load setup_cantera, but follow solution from #36
+# i.e. copy as root libs to respective /usr/lib python folders. Consult ticket #36
+# for important details!
+
 # NOTE - PYTHON SAMPLES
+# =====================
 # ~/src/cantera/interfaces/cython/cantera/examples
 
 # *** AFTER THE INSTALLATION - EXAMPLE MESSAGE ***
