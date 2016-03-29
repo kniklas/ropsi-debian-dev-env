@@ -81,3 +81,9 @@ sudo scons install
 #     before using Cantera, or else include its contents in your shell
 #     login script.
 
+# !!! NOTE - MODULES !!!
+# ======================
+# python3_package=y might cause problems - see issue: #36
+# In this case it is not required to load setup_cantera, but follow solution from #36
+# i.e. copy as root libs to respective /usr/lib python folders. Consult ticket #36
+# for important details!
