@@ -112,9 +112,6 @@ fi
 # Use only after GIT is installed from source (setup-git.sh)
 source ~/.git-completion.bash
 
-# Use only if canter has been installed (setup-cantera.sh)
-source ~/cantera_2_2/bin/setup_cantera
-
 # Enable powerline-shell
 function _update_ps1() {
    export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
