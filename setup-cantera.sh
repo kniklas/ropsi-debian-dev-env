@@ -58,7 +58,7 @@ sudo scons install
 # library files  		 /home/kamil/cantera_2_2/lib
 # C++ headers    		 /home/kamil/cantera_2_2/include
 # samples        		 /home/kamil/cantera_2_2/share/cantera/samples
-# data files     		 /home/kamil/cantera_2_0/share/cantera/data
+# data files     		 /home/kamil/cantera_2_2/share/cantera/data
 # Python 2 package (cantera) 	 /home/kamil/cantera_2_2/lib/python2.7/site-packages
 # Python 2 samples           	 /home/kamil/cantera_2_2/lib/python2.7/site-packages/cantera/examples
 # Python 3 package (cantera) 	 /home/kamil/cantera_2_2/lib/python3.4/site-packages
@@ -68,7 +68,7 @@ sudo scons install
 # The setup script configures the environment for Cantera. It is
 # recommended that you run this script by typing:
 # 
-#     source /home/kamil/cantera_2_0/bin/setup_cantera
+#     source /home/kamil/cantera_2_2/bin/setup_cantera
 # 
 #     before using Cantera, or else include its contents in your shell
 #     login script.
