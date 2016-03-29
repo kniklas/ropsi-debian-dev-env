@@ -2,10 +2,11 @@
 
 # Get dependencies
 sudo apt-get install g++ python scons libboost-all-dev libsundials-serial-dev \
-	subversion sphinx-common cython python-dev python-numpy python-numpy-dev
+	subversion sphinx-common cython python-dev python-numpy python-numpy-dev \
+	cython
 
 # Required for building Python modules
-# cython  !!! NOTE debian package is outdated and not compatible!
+# cython  - from Debian 8.x package is OK
 # python-dev 
 # python-numpy 
 # python-numpy-dev
@@ -24,8 +25,8 @@ sudo easy_install -U pygments
 sudo easy_install -U pyparsing
 sudo easy_install sphinxcontrib-doxylink
 
-# Install Cython (in case newer version of cantera is required)
-sudo easy_install cython
+# Install Cython (uncomment if newer version of cantera is required)
+# sudo easy_install cython
 
 # Install Cantera
 # Download source code - uncomment specific line depending on required version
