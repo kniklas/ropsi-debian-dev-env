@@ -1,5 +1,20 @@
 # ROPSI Development Environment - Release Notes
 
+## v0.2.0 (2016-03-30)
+
+Updated version to cater for Deian 8 (Jessie) distribution, installation of Cantera v2.2 and fixed a few errors.
+
+### Key features/changes/fixes
+
+* Fixed problem of git installation from source
+* Changed `.bashrc` to include `git-completion.bash`
+* Cantera v2.2 installation from source (via Git repo)
+* Updated VIM compilation to use python3
+* Updated python-ide to use solarized colorscheme for VIM
+* Updated `.vimrc` to use solarized colorscheme and Python-mode to use python3
+* Midori 0.5.11 installation (note issue [#22] is still unresolved)
+* Fixed problems in ratpoison installation
+
 ## v0.1.0 (2015-08-15)
 
 It is initial version of the development environment configuration files. Used on VMWare Player (7.x)
