@@ -8,15 +8,16 @@
 # b) See if there is other way to use alternatives (i.e. use vi for vim)
 
 # Ensure there are met installation pre-conditions
-sudo apt-get install ncurses-dev build-essential mercurial python-dev python3-dev
+sudo apt-get update
+sudo apt-get install git ncurses-dev build-essential python-dev python3-dev
 
 # Put source into home directory
-mkdir -p ~/src
-cd ~/src
-hg clone https://vim.googlecode.com/hg/ vim
+mkdir -p ~/git
+cd ~/git
+git clone https://github.com/vim/vim.git
 
 # Remove earlier installed VIMs
-sudo apt-get remove vim-common vim-tiny
+sudo apt-get remove vim-common vim-tiny vim vim-runtime vim-gui-common
 
 # In order to remove previously compiled versions:
 # make clean # - remove binary files
@@ -29,7 +30,7 @@ sudo apt-get remove vim-common vim-tiny
 # In Debian 8 use python lib: /usr/lib/python3.4/config-3.4m-x86_64-linux-gnu/
 #--with-python-config-dir=/usr/lib/python2.7/config \
 #--enable-pythoninterp \
-cd vim/src
+cd ~/git/vim
 make clean
 make distclean
 ./configure \
