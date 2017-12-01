@@ -1,24 +1,50 @@
 " do not use compatible mode
 set nocp
 
+" Automatically release .vimrc file upon save
+autocmd! bufwritepost .vimrc source %
+
 " Use dark background
-" set background=dark
+set background=dark
+
+" Highlight white spaces
+" NOTE: this must be run before syntax highlight command!
+"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+"au InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Start pathogen to manage plugins and VIM runtime files
+" Pathogen load
+execute pathogen#infect()
+execute pathogen#helptags()
+
+syntax on
+filetype off
+filetype plugin indent on
 
 " Ensure to use 256 colors in xterm
 set t_Co=256
+let g:solarized_termcolors=256
 
 " Use color scheme
-" colorscheme wombat256mod
-colorscheme desert256
+colorscheme solarized
+"colorscheme wombat256
+"colorscheme desert256
+
+" Alternate 16 color colorschemes
+" delek desert elflord darkblue slate murphy
 
 " Use <Leader> to '<space>' key
 let mapleader = "\<space>"
 
 noremap <Leader>e :quit<CR>
 noremap <Leader>E :qa<CR>
+noremap <Leader>Q :qa!<CR>
 
-" Alternate colorschemes
-" delek desert elflord darkblue slate murphy
+" Delete Buffer
+map <Leader>d <esc>:bd<CR>
+
+" Map sorting to s key
+vnoremap <Leader>s :sort<CR>
 
 " Easier movement through the windows
 " Use <c-j> instead of <c-w>j, etc.
@@ -27,26 +53,46 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Navigate through the tabs
-map <Leader>N <esc>:tabprevious<CR>
-map <Leader>n <esc>:tabnext<CR>
+" Easier indentation of code
+vnoremap < <gv
+vnoremap > >gv
 
-" Start pathogen to manage plugins and VIM runtime files
-" Pathogen load
-filetype off
-execute pathogen#infect()
-execute pathogen#helptags()
-filetype plugin indent on
-syntax on
+" Navigate through the tabs
+map <Leader>m <esc>:tabnext<CR>
+map <Leader>M <esc>:tabprevious<CR>
+
+" Navigate through the buffers
+map <Leader>n <esc>:bn<CR>
+map <Leader>N <esc>:bp<CR>
 
 " Configure Python-mode
-map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
+"map <Leader>g :call RopeGotoDefinition()<CR>
+let g:pymode_python = 'python3'
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+" Go to definition
+let g:pymode_rope_goto_definition_bind = '<leader>g'
+let g:pymode_rope_goto_definition_cmd = 'new'
+" Completion
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_completion_bind = '<C-Space>'
+let g:pymode_rope_autoimport = 1
+"let g:pymode_lint_ignore = "W,E"
+let g:pymode_indent = 1
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+let g:pymode_folding = 1
+" NOTE: consult VIM manuals for folding commands! `:help fold-commands`
+let g:pymode_options_max_line_length = 79
+let g:pymode_options_colorcolumn = 1
+let g:pymode_trim_whitespaces = 1
 let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
 let g:pymode_virtualenv = 1
+" Disabled configuration - probably outdated
+"let ropevim_enable_shortcuts = 1
+"let g:pymode_rope_goto_def_newwin = "vnew"
 
 " Configure NERDTree
 " Run with <leader>t and close the window is last empty window has NERD tree
@@ -68,7 +114,7 @@ set wildignore+=*/coverage/*
 nmap <leader>a <Esc>:Ack!
 
 " Set color for column
-highlight ColorColumn ctermbg=7
+"highlight ColorColumn ctermbg=7
 
 " Normal backspace and mouse
 set bs=2
@@ -80,13 +126,13 @@ set showtabline=2
 set noshowmode
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 
-" Highlight white spaces
-" Disabled as does not work very well
-"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-"au InsertLeave * match ExtraWhitespace /\s\+$/
+" Easier formatting of paragraphs
+" Note the `nmap Q` replace Ex mode entry from Normal mode
+vmap Q gq
+nmap Q gqap 
 
 " Write and then execute current open file
-nmap <F3> :w<CR> :pyfile %<CR>
+"nmap <F3> :w<CR> :pyfile %<CR>
 
 " Reload .vimrc file
 nmap <C-F5> :source ~/.vimrc<CR>
@@ -103,9 +149,9 @@ autocmd BufReadPost *.py set textwidth=79
     	\ tabstop=8
     	\ shiftwidth=4
     	\ softtabstop=4
-  	\ colorcolumn=80
     	\ expandtab
     	\ autoindent
     	\ hlsearch
   	\ number
     	\ ruler
+          "\ colorcolumn=80

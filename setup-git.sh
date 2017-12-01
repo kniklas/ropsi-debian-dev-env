@@ -1,14 +1,16 @@
 #!/bin/bash
 
-# In order to get git source use:
-# mkdir -p ~/src
-# git clone https://github.com/git/git.git
-
 # Install dependencies
 sudo apt-get install asciidoc autoconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 
-# Install
-cd ~/src/git/
+# Download Git master branch source code
+mkdir -p ~/src
+cd ~/src
+wget https://github.com/git/git/archive/master.zip
+unzip master.zip
+cd ~/src/git-master/
+
+# Install Git
 sudo make prefix=/usr install install-doc install-html install-info
 make configure 
 ./configure --prefix=/usr
@@ -34,6 +36,12 @@ git config --list
 
 # Install git completion
 sudo cp contrib/completion/git-completion.bash /etc/bash_completion.d/
+# If above doesn't work, try:
+# 	cp contrib/completion/git-completion.bash ~/.git-completion.bash
+# manually add to ~/.bashrc line:
+#	source ~/.git-completion.bash 
+# restart shell (logout, login) if necessary
+# Note: this will work only for this user!
 
 # Enable vimdiff as difftool
 git config --global diff.tool vimdiff

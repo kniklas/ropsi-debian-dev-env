@@ -109,6 +109,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Use only after GIT is installed from source (setup-git.sh)
+source ~/.git-completion.bash
+
 # Enable powerline-shell
 function _update_ps1() {
    export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
